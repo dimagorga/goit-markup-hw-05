@@ -5,7 +5,7 @@
     --background-main-color: #FFFFFF;
     --background-light-color:#F5F4FA;
     --background-hero-color:#2F303A;
-    ;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body{
@@ -129,7 +129,7 @@ img{
     padding-top: 32px;
     padding-bottom: 32px;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms var(--timing-function);
 
 }
 
@@ -179,7 +179,7 @@ img{
     padding-top: 32px;
     padding-bottom: 32px;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms var(--timing-function);
 }
 
 .contacts-icon{
@@ -188,7 +188,7 @@ img{
     fill: #757575;
     margin-right: 10px;
 
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms var(--timing-function);
 }
 
 .contacts-icon.phone{
@@ -451,7 +451,7 @@ img{
     border-radius: 50%;
     fill: #AFB1B8;
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms var(--timing-function);
 
 }
 
@@ -506,7 +506,7 @@ img{
     border-radius: 4px;
     fill: #AFB1B8; 
 
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),;
+    transition: border-color 250ms var(--timing-function),;
 }
 
 .clients-link:hover,
@@ -515,7 +515,7 @@ img{
 }
 
 .clients-icon{
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+    transition: fill 250ms var(--timing-function) ;
 }
 
 
@@ -579,7 +579,7 @@ img{
     line-height: 1.714;
     text-decoration: none;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms var(--timing-function);
 }
 
 .address-list-item-link:hover,
@@ -653,9 +653,9 @@ img{
 
     padding: 6px 22px;
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
     
 }
 
@@ -692,7 +692,7 @@ img{
     display: block;
     text-decoration: none; 
 
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms var(--timing-function);
 }
 
 .portfolio-link:hover,
@@ -734,7 +734,7 @@ img{
 
     left: 0%;
     bottom: -100%;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms var(--timing-function);
 }
 
 .portfolio-link:hover .overlay-text{
@@ -778,7 +778,12 @@ img{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    transition: all 250ms linear;
+    
+
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
+    
+
 }
 .modal{
     position: absolute;
