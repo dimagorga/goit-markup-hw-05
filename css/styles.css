@@ -460,7 +460,9 @@ img{
     background-color: var(--accent-color);
 }
 
-
+.social-icon{
+    transition: fill 250ms var(--timing-function);;
+}
 
 .social-link:hover .social-icon ,
 .social-link:focus .social-icon{
